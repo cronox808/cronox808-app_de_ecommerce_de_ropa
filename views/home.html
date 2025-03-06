@@ -16,17 +16,71 @@
     </div>
     <div class="search-box">
         <div class="row">
-            <input type="text" class="search-bar"
-            placeholder="Search for a country..."
-            autocomplete="off"
-            >
-            <button>
-                <!--svg-->
+            <button class="search-btn">
+                <img src="../storage/img/search-normal.png">
             </button>
+            <input type="text" class="search-bar"
+                placeholder="Search for a country..."
+                autocomplete="off">
         </div>
         <div class="results"></div>
     </div>
-    <script src="../js/Components/search.js"></script>
     
+    <script src="../js/Components/search.js"></script>
+    <div class="filter-container">
+        <label class="filter-item active">🔲 All Items</label>
+        <label class="filter-item">👗 Dress</label>
+        <label class="filter-item">👕 T-Shirt</label>
+        <label class="filter-item">👖 Pants</label>
+        <label class="filter-item">🧥 Jackets</label>
+        <label class="filter-item">👟 Shoes</label>
+        <label class="filter-item">🎩 Hats</label>
+        <label class="filter-item">👜 Bags</label>
+    </div>
+    <script src="../js/Components/filter-container.js"></script>
+    <div class="main">
+        <div class="left">
+            <div class="c1">
+                <img src="../storage/img/example1.png">
+                <h1>Modern Light Clothes</h1>
+                <h5>T-Shirt</h5>
+                <h3>$212.99</h3>
+                <img src="../storage/img/Type=default, Category=linear, Library=star.png">
+                <h6>5.0</h6>
+            </div>
+            <div class="c2">
+                <img src="../storage/img/example3.png">
+                <h1>Modern Light Clothes</h1>
+                <h5>T-Shirt</h5>
+                <h3>$212.99</h3>
+                <img src="../storage/img/Type=default, Category=linear, Library=star.png">
+                <h6>5.0</h6>
+            </div>
+        </div>
+        <div class="right">
+            <div class="c3">
+                <img src="../storage/img/example2.png">
+                <h1>Light Dress Bless</h1>
+                <h5>Dress modern</h5>
+                <h3>$162.99</h3>
+                <img src="../storage/img/Type=default, Category=linear, Library=star.png">
+                <h6>5.0</h6>
+            </div>
+            <div class="c3">
+                <img src="../storage/img/example4.png">
+                <h1>Light Dress Bless</h1>
+                <h5>Dress modern</h5>
+                <h3>$162.99</h3>
+                <img src="../storage/img/Type=default, Category=linear, Library=star.png">
+                <h6>5.0</h6>
+            </div>
+        </div>
+    </div>
+    <footer class="select">
+        <img src="../storage/img/Home.png">
+        <img src="../storage/img/Cart.png">
+        <img src="../storage/img/Favourite.png">
+        <img src="../storage/img/Account.png">
+    </footer>
 </body>
 </html>
