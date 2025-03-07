@@ -1,114 +1,169 @@
 @import url(variables.css);
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter_18pt-Regular";
 }
-.welcome{
+
+body {
     display: flex;
-    margin-top:24px;
-    margin-left: 24px;
-    margin-right: 24px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 130px 24px 0 24px;
 }
-.welcome img{
+
+.welcome {
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.welcome img {
     margin-left: auto;
 }
 
-
-
-@media (max-width: 480px){
-    .welcome{
-        gap: 180px;
-    }
-}
-
-.welcome h5{
+.welcome h5 {
     font-size: 12px;
 }
 
-/* Pantallas medianas */
 @media (min-width: 600px) {
-  .welcome h5{
-    font-size: 14px; /* Ajuste a 14px para pantallas medianas */
-  }
+    .welcome h5 {
+        font-size: 14px;
+    }
 }
 
-/* Pantallas grandes */
 @media (min-width: 1024px) {
-    .welcome h5{
+    .welcome h5 {
         font-size: 16px;
     }
 }
 
-/* Pantallas extra grandes */
 @media (min-width: 1440px) {
-  .welcome h5 {
-    font-size: 18px; /* Ajuste a 18px para pantallas muy grandes */
-  }
+    .welcome h5 {
+        font-size: 18px;
+    }
 }
 
-
-.welcome h1{
+.welcome h1 {
     font-size: 16px;
 }
-  /* Pantallas medianas */
-  @media (min-width: 600px) {
-    .welcome h1 {
-      font-size: 18px; /* Ajuste a 18px para pantallas medianas */
-    }
-  }
-  
-  /* Pantallas grandes */
-  @media (min-width: 1024px) {
-    .welcome h1 {
-      font-size: 20px; /* Ajuste a 20px para pantallas grandes */
-    }
-  }
-  
-  /* Pantallas más grandes */
-  @media (min-width: 1440px) {
-    .welcome h1 {
-      font-size: 24px; /* Ajuste a 24px para pantallas más grandes */
-    }
-  }
 
-  .search-box {
+@media (min-width: 600px) {
+    .welcome h1 {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .welcome h1 {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .welcome h1 {
+        font-size: 24px;
+    }
+}
+
+.buscar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 800px;
     margin-top: 16px;
+    background-color: brown;
+    padding: 8px;
+    border-radius: 8px;
+    justify-content: center;
+}
+
+.filter {
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    background-color: var(--color-1);
+    width: 48px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.filter img {
+    width: 24px;
+    height: 24px;
+}
+
+.search-box {
+    position: relative;
     background: var(--input-bg);
     border-radius: 8px;
-    padding: 0.75rem;
-    max-width: 327px;
+    padding: 0 16px;
+    height: 48px;
     width: 100%;
+    max-width: 600px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
 }
 
 .row {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .search-btn {
-    background-color: transparent;
+    background: transparent;
     border: none;
     outline: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+.search-btn img {
+    width: 20px;
+    height: 20px;
 }
 
 .search-bar {
     flex: 1;
-    max-height: 2.5rem;
     border: 0;
     outline: 0;
     font-size: 14px;
     color: var(--text);
-    padding: 0.5rem;
+    background: transparent;
+    padding: 0;
 }
 
 .results {
-    max-height: 20rem;
+    max-height: 200px;
     overflow-y: auto;
-    margin-top: 1rem;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: var(--input-bg);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    z-index: 1000;
 }
 
 .results ul {
@@ -117,18 +172,40 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
-    gap: 0.25rem; /* Espacio entre elementos */
 }
 
 .results ul li {
     list-style: none;
-    border-radius: 0.75rem;
-    padding: 1rem 0.75rem;
+    padding: 12px;
     cursor: pointer;
+    background: white;
 }
 
 .results ul li:hover {
     background: var(--item-hover);
-    border-radius: 0.25rem;
     transition: background 0.3s ease;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.left, .right {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: 100%;
+}
+
+footer.select {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 16px auto;
 }
