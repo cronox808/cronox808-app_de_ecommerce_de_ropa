@@ -4,12 +4,16 @@
       --color-3: #a3a1a2;
       --color-4: #f2f2f2;
       --color-5: #121111;
-        --ratio: 3.74;
-    --cta-color: rgb(0, 102, 254);
-    --light-color-bg: rgb(238, 241, 247);
-    --dark-color-bg: rgb(55, 65, 81);
-    --grey-color: rgb(107, 114, 128);
-    --leading: 0.025em;
+      --ratio: 3.74;
+      --cta-color: rgb(0, 102, 254);
+      --light-color-bg: rgb(238, 241, 247);
+      --dark-color-bg: rgb(55, 65, 81);
+      --grey-color: rgb(107, 114, 128);
+      --leading: 0.025em;
+      --bg: #f0f0f0;
+      --input-bg: white;
+      --text: #27292B;
+      --item-hover: #f6f6f6;
 }
 @font-face {
   font-family: "EncodeSans-Black";
