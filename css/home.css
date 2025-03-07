@@ -5,3 +5,130 @@
     box-sizing: border-box;
     font-family: "Inter_18pt-Regular";
 }
+.welcome{
+    display: flex;
+    margin-top:24px;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+.welcome img{
+    margin-left: auto;
+}
+
+
+
+@media (max-width: 480px){
+    .welcome{
+        gap: 180px;
+    }
+}
+
+.welcome h5{
+    font-size: 12px;
+}
+
+/* Pantallas medianas */
+@media (min-width: 600px) {
+  .welcome h5{
+    font-size: 14px; /* Ajuste a 14px para pantallas medianas */
+  }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1024px) {
+    .welcome h5{
+        font-size: 16px;
+    }
+}
+
+/* Pantallas extra grandes */
+@media (min-width: 1440px) {
+  .welcome h5 {
+    font-size: 18px; /* Ajuste a 18px para pantallas muy grandes */
+  }
+}
+
+
+.welcome h1{
+    font-size: 16px;
+}
+  /* Pantallas medianas */
+  @media (min-width: 600px) {
+    .welcome h1 {
+      font-size: 18px; /* Ajuste a 18px para pantallas medianas */
+    }
+  }
+  
+  /* Pantallas grandes */
+  @media (min-width: 1024px) {
+    .welcome h1 {
+      font-size: 20px; /* Ajuste a 20px para pantallas grandes */
+    }
+  }
+  
+  /* Pantallas más grandes */
+  @media (min-width: 1440px) {
+    .welcome h1 {
+      font-size: 24px; /* Ajuste a 24px para pantallas más grandes */
+    }
+  }
+
+  .search-box {
+    margin-top: 16px;
+    background: var(--input-bg);
+    border-radius: 8px;
+    padding: 0.75rem;
+    max-width: 327px;
+    width: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.search-btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.search-bar {
+    flex: 1;
+    max-height: 2.5rem;
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+    color: var(--text);
+    padding: 0.5rem;
+}
+
+.results {
+    max-height: 20rem;
+    overflow-y: auto;
+    margin-top: 1rem;
+}
+
+.results ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 0.25rem; /* Espacio entre elementos */
+}
+
+.results ul li {
+    list-style: none;
+    border-radius: 0.75rem;
+    padding: 1rem 0.75rem;
+    cursor: pointer;
+}
+
+.results ul li:hover {
+    background: var(--item-hover);
+    border-radius: 0.25rem;
+    transition: background 0.3s ease;
+}
