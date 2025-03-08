@@ -12,11 +12,15 @@ body {
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     padding: 130px 24px 0 24px;
+    overflow-x: hidden;
+    overflow: auto;
 }
 
 .welcome {
+    margin: 0;
+    padding: 0;
     background-color: bisque;
     display: flex;
     align-items: center;
@@ -75,6 +79,8 @@ body {
 }
 
 .buscar {
+    margin: 0;
+    padding: 0;
     display: flex;
     align-items: center;
     gap: 16px;
@@ -184,6 +190,51 @@ body {
 .results ul li:hover {
     background: var(--item-hover);
     transition: background 0.3s ease;
+}
+
+.filter-container {
+    display: flex;
+    flex-wrap: nowrap; /* Mantiene los elementos en una sola línea */
+    justify-content: flex-start; /* Alinea a la izquierda para que el scroll funcione bien */
+    background-color: #333;
+    gap: 16px;
+    padding: 8px;
+    width: 100%;
+    overflow-x: auto; /* Permite el scroll horizontal */
+    white-space: nowrap; /* Evita que los elementos se rompan en varias líneas */
+}
+
+.filter-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 34px;
+    padding: 8px 16px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    background-color: #444;
+    transition: background 0.3s ease;
+    font-size: 12px;
+    flex-shrink: 0; /* Evita que los elementos se reduzcan demasiado */
+}
+
+.filter-container a:hover {
+    background-color: #555;
+}
+
+/* Media Query para dispositivos pequeños */
+@media (max-width: 768px) {
+    .filter-container {
+        justify-content: flex-start; /* Mantiene el scroll en móviles */
+        padding: 8px 16px;
+    }
+
+    .filter-container a {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
 }
 
 .main {
