@@ -1,4 +1,5 @@
 @import url(variables.css);
+
 * {
     margin: 0;
     padding: 0;
@@ -6,26 +7,34 @@
     font-family: "Inter_18pt-Regular";
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    min-height: 100vh;
-    padding: 130px 24px 0 24px;
-    overflow-x: hidden;
-    overflow: auto;
-}
-
-.welcome {
+html, body {
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
-    background-color: bisque;
+    overflow-x: hidden;
+}
+
+/* Corrección: Eliminamos márgenes entre elementos internos */
+.welcome, .buscar, .filter-container {
+    width: 100vw;
+    max-width: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
+    margin: 0 !important;
+    padding: 0;
+    gap: 8px; /* Espaciado uniforme */
+}
+
+.welcome h1, .welcome h5, .buscar *, .filter-container a {
+    margin: 0 !important; /* Eliminamos márgenes internos */
+    padding: 0;
+}
+
+/* Estilos específicos */
+.welcome {
     justify-content: space-between;
-    width: 100%;
     padding: 12px;
     border-radius: 8px;
 }
@@ -79,18 +88,10 @@ body {
 }
 
 .buscar {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    width: 100%;
-    max-width: 800px;
-    margin-top: 16px;
-    background-color: brown;
     padding: 8px;
     border-radius: 8px;
     justify-content: center;
+    gap: 16px;
 }
 
 .filter {
@@ -110,6 +111,10 @@ body {
     height: 24px;
 }
 
+.filter:hover {
+    background-color: #333;
+}
+
 .search-box {
     position: relative;
     background: var(--input-bg);
@@ -124,6 +129,7 @@ body {
     gap: 8px;
     justify-content: center;
 }
+
 
 .row {
     display: flex;
@@ -141,8 +147,12 @@ body {
     justify-content: center;
     width: 24px;
     height: 24px;
+    border-radius: 8px;
 }
 
+.search-btn:hover {
+    background-color: var(--color-4);
+}
 .search-btn img {
     width: 20px;
     height: 20px;
@@ -194,40 +204,41 @@ body {
 
 .filter-container {
     display: flex;
-    flex-wrap: nowrap; /* Mantiene los elementos en una sola línea */
-    justify-content: flex-start; /* Alinea a la izquierda para que el scroll funcione bien */
-    background-color: #333;
-    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8px;
     padding: 8px;
-    width: 100%;
-    overflow-x: auto; /* Permite el scroll horizontal */
-    white-space: nowrap; /* Evita que los elementos se rompan en varias líneas */
+    width: 100vw;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
-.filter-container a {
+.filter-container button {
+    border: 1px solid var(--color-6);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 34px;
     padding: 8px 16px;
-    color: white;
+    color: var(--color-1);
     text-align: center;
     text-decoration: none;
     border-radius: 8px;
-    background-color: #444;
+    background-color: var(--input-bg);
     transition: background 0.3s ease;
     font-size: 12px;
-    flex-shrink: 0; /* Evita que los elementos se reduzcan demasiado */
+    flex-shrink: 0;
 }
 
-.filter-container a:hover {
-    background-color: #555;
+.filter-container button:hover {
+    background-color: var(--color-6);
 }
 
 /* Media Query para dispositivos pequeños */
 @media (max-width: 768px) {
     .filter-container {
-        justify-content: flex-start; /* Mantiene el scroll en móviles */
+        justify-content: flex-start;
         padding: 8px 16px;
     }
 
