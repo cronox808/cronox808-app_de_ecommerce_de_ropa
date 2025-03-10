@@ -7,11 +7,11 @@
     font-family: "EncodeSans-Regular";
 }
 
-html, body {
+ body {
     width: 100%;
     height: 100%;
     margin: 0;
-    padding: 0;
+    padding: 24px 24px 19px 24px;
     overflow-x: hidden;
     background-color: #f8f8f8;
 }
@@ -20,7 +20,6 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px;
     border-radius: 8px;
 }
 
@@ -164,13 +163,11 @@ html, body {
 
 
 .c1, .c2, .c3, .c4 {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: fit-content;
     width: fit-content;
     height: auto;
+    text-align: left;
 }
 
 .c1 img, .c2 img, .c3 img, .c4 img {
@@ -179,16 +176,108 @@ html, body {
 }
 
 
+/* 📱 Tamaño para celulares */
+@media (max-width: 600px) {
+    .c1, .c2 {
+        max-width: 155px;
+        max-height: 298px; /* Reduce el tamaño en celulares */
+    }
+}
+
+@media (max-width: 600px) {
+    .left img {
+        max-width: 150px;
+        max-height: 217px; /* Reduce el tamaño en celulares */
+    }
+}
+
+
+@media (max-width: 600px) {
+    .c3, .c4 {
+        max-width: 155px;
+        max-height: 332px; /* Reduce el tamaño en celulares */
+    }
+}
+
+@media (max-width: 600px) {
+    .right img {
+        max-width: 155px;
+        max-height: 251px; /* Reduce el tamaño en celulares */
+    }
+}
+
+@media (max-width: 1024px) {
+    .c1, .c2{
+        max-width: 310px;
+        max-height: 596px; /* Reduce el tamaño en celulares */
+    }
+}
+
+@media (max-width: 1024px) {
+    .c3, .c4 {
+       max-width: 310px; /* Tamaño medio en tablets */
+       max-height: 664px;
+   }
+}
+
+
+/* 📲 Tamaño para tablets */
+@media (max-width: 1024px) {
+     .left img {
+        max-width: 300px; /* Tamaño medio en tablets */
+        max-height: 434px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .right img {
+       max-width: 310px; /* Tamaño medio en tablets */
+       max-height: 502px;
+   }
+}
+
+
+@media (min-width: 1025px) {
+    .c3, .c4 {
+       max-width: 620px; /* Tamaño medio en tablets */
+       max-height: 1004px;
+   }
+}
+
+
+@media (min-width: 1025px) {
+    .left img {
+       max-width: 600px; /* Tamaño medio en pc */
+       max-height: 868px;
+   }
+}
+
+@media (min-width: 1025px) {
+    .c1, .c2 {
+        max-width: 620px;
+        max-height: 1192px; /* Reduce el tamaño en celulares */
+    }
+}
+
+@media (min-width: 1025px) {
+    .right img {
+       max-width: 620px; /* Tamaño medio en pc */
+       max-height: 1004px;
+   }
+}
+
+
 .main {
-    background-color: green;
+    margin: 0;
     display: grid;
     grid-template-areas: "left right";
     grid-template-columns: 30% 30%; /* Siempre divide el espacio en dos */
     justify-content: center;
     gap: 16px;
     width: 100%;
-    padding: 16px;
 }
+
+
 
 .left, .right {
     display: flex;
@@ -199,12 +288,10 @@ html, body {
 }
 .left {
     grid-area: left;
-    background-color: red;
 }
 
 .right {
     grid-area: right;
-    background-color: blue;
 }
 
 
@@ -214,7 +301,50 @@ html, body {
         grid-template-columns: 50% 50%; /* Fuerza que siempre haya dos columnas */
     }
 }
+
+.c1 h1{ 
+    font-family: "EncodeSans-SemiBold";
+    margin-top: 8px;
+    font-size: clamp(14px, 2vw, 24px);
+}
+
+.c1 h5{
+    font-family: "EncodeSans-Regular";
+    color: var(--color-2);
+    margin-top: 4px;
+    font-size: clamp(10px, 2vw, 24px);
+}
+
+
+.c2 h1{ 
+    font-family: "EncodeSans-SemiBold";
+    margin-top: 8px;
+    font-size: clamp(14px, 2vw, 24px);
+}
+
+.c2 h5{
+    font-family: "EncodeSans-Regular";
+    color: var(--color-2);
+    margin-top: 4px;
+    font-size: clamp(10px, 2vw, 24px);
+}
+
+
+.c3 h1{ 
+    font-family: "EncodeSans-SemiBold";
+    margin-top: 8px;
+    font-size: clamp(14px, 2vw, 24px);
+}
+
+.c3 h5{
+    font-family: "EncodeSans-Regular";
+    color: var(--color-2);
+    margin-top: 4px;
+    font-size: clamp(10px, 2vw, 24px);
+}
+
 .precio{
+    margin-top: 12px;
     display: flex;
     align-items: center;
 }
@@ -224,20 +354,32 @@ html, body {
     height: 18px;
 }
 .precio h3{
+    font-family: "EncodeSans-SemiBold";
     font-size: clamp(14px, 2vw, 24px);
 }
 
 .precio h6{
+    font-family: "EncodeSans-Regular";
+    color: var(--color-2);
     font-size: clamp(12px, 2vw, 24px);
 }
-.c4 h1{
+.c4 h1{ 
+    font-family: "EncodeSans-SemiBold";
+    margin-top: 8px;
     font-size: clamp(14px, 2vw, 24px);
 }
 
 .c4 h5{
+    font-family: "EncodeSans-Regular";
+    color: var(--color-2);
+    margin-top: 4px;
     font-size: clamp(10px, 2vw, 24px);
 }
-
+.calificacion{
+    display: flex;
+    margin-left: 24px;
+    align-items: center;
+}
 
 footer.select {
     display: flex;
