@@ -20,7 +20,6 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px;
     border-radius: 8px;
 }
 
@@ -180,15 +179,108 @@ html, body {
 }
 
 
+/* 📱 Tamaño para celulares */
+@media (max-width: 600px) {
+    .c1, .c2 {
+        max-width: 155px;
+        max-height: 298px; /* Reduce el tamaño en celulares */
+    }
+}
+
+@media (max-width: 600px) {
+    .left img {
+        max-width: 150px;
+        max-height: 217px; /* Reduce el tamaño en celulares */
+    }
+}
+
+
+@media (max-width: 600px) {
+    .c3, .c4 {
+        max-width: 155px;
+        max-height: 332px; /* Reduce el tamaño en celulares */
+    }
+}
+
+@media (max-width: 600px) {
+    .right img {
+        max-width: 155px;
+        max-height: 251px; /* Reduce el tamaño en celulares */
+    }
+}
+
+@media (max-width: 1024px) {
+    .c1, .c2{
+        max-width: 310px;
+        max-height: 596px; /* Reduce el tamaño en celulares */
+    }
+}
+
+@media (max-width: 1024px) {
+    .c3, .c4 {
+       max-width: 310px; /* Tamaño medio en tablets */
+       max-height: 664px;
+   }
+}
+
+
+/* 📲 Tamaño para tablets */
+@media (max-width: 1024px) {
+     .left img {
+        max-width: 300px; /* Tamaño medio en tablets */
+        max-height: 434px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .right img {
+       max-width: 310px; /* Tamaño medio en tablets */
+       max-height: 502px;
+   }
+}
+
+
+@media (min-width: 1025px) {
+    .c3, .c4 {
+       max-width: 620px; /* Tamaño medio en tablets */
+       max-height: 1004px;
+   }
+}
+
+
+@media (min-width: 1025px) {
+    .left img {
+       max-width: 600px; /* Tamaño medio en pc */
+       max-height: 868px;
+   }
+}
+
+@media (min-width: 1025px) {
+    .c1, .c2 {
+        max-width: 620px;
+        max-height: 1192px; /* Reduce el tamaño en celulares */
+    }
+}
+
+@media (min-width: 1025px) {
+    .right img {
+       max-width: 620px; /* Tamaño medio en pc */
+       max-height: 1004px;
+   }
+}
+
+
 .main {
+    margin: 0;
     display: grid;
     grid-template-areas: "left right";
     grid-template-columns: 30% 30%; /* Siempre divide el espacio en dos */
     justify-content: center;
     gap: 16px;
     width: 100%;
-    padding: 16px;
 }
+
+
 
 .left, .right {
     display: flex;
