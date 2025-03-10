@@ -161,21 +161,7 @@ html, body {
     color: #fff;
 }
 
-.main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
 
-.left, .right {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 16px;
-    width: 100%;
-    max-width: 900px;
-}
 
 .c1, .c2, .c3 {
     background: #fff;
@@ -201,4 +187,31 @@ footer.select {
     padding: 16px;
     background: #fff;
     border-radius: 8px;
+}
+
+.main {
+    display: grid;
+    grid-template-areas: "left right";
+    grid-template-columns: 1fr 1fr; /* Divide en 2 columnas iguales */
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.left, .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.left {
+    grid-area: left;
+    background-color: red;
+}
+
+.right {
+    grid-area: right;
+    background-color: blue;
 }
