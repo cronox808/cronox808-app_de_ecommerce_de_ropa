@@ -163,39 +163,31 @@ html, body {
 
 
 
-.c1, .c2, .c3 {
+.c1, .c2, .c3, .c4 {
     background: #fff;
-    padding: 16px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 100%;
-    max-width: 280px;
+    width: fit-content;
+    width: fit-content;
+    height: auto;
 }
 
-.c1 img, .c2 img, .c3 img {
+.c1 img, .c2 img, .c3 img, .c4 img {
     width: 100%;
     border-radius: 8px;
 }
 
-footer.select {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    margin-top: 16px;
-    padding: 16px;
-    background: #fff;
-    border-radius: 8px;
-}
 
 .main {
+    background-color: green;
     display: grid;
     grid-template-areas: "left right";
-    grid-template-columns: 1fr 1fr; /* Divide en 2 columnas iguales */
+    grid-template-columns: 30% 30%; /* Siempre divide el espacio en dos */
     justify-content: center;
     gap: 16px;
     width: 100%;
+    padding: 16px;
 }
 
 .left, .right {
@@ -203,9 +195,8 @@ footer.select {
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    width: 100%;
+    min-width: 150px; /* Evita que se colapsen demasiado */
 }
-
 .left {
     grid-area: left;
     background-color: red;
@@ -214,4 +205,47 @@ footer.select {
 .right {
     grid-area: right;
     background-color: blue;
+}
+
+
+/* 📱 En celulares pequeños, aseguramos que siempre haya dos columnas */
+@media (max-width: 400px) {
+    .main {
+        grid-template-columns: 50% 50%; /* Fuerza que siempre haya dos columnas */
+    }
+}
+.precio{
+    display: flex;
+    align-items: center;
+}
+
+.precio img{
+    width: 18px;
+    height: 18px;
+}
+.precio h3{
+    font-size: clamp(14px, 2vw, 24px);
+}
+
+.precio h6{
+    font-size: clamp(12px, 2vw, 24px);
+}
+.c4 h1{
+    font-size: clamp(14px, 2vw, 24px);
+}
+
+.c4 h5{
+    font-size: clamp(10px, 2vw, 24px);
+}
+
+
+footer.select {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 16px;
+    padding: 16px;
+    background: #000000;
+    border-radius: 8px;
 }
