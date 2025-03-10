@@ -14,28 +14,32 @@
         </div>
         <img src="../storage/img/Profile.png">
     </div>
-    <div class="search-box">
-        <div class="row">
-            <button class="search-btn">
-                <img src="../storage/img/search-normal.png">
-            </button>
-            <input type="text" class="search-bar"
-                placeholder="Search for a country..."
-                autocomplete="off">
+    <div class="buscar">
+        <div class="search-box">
+            <div class="row">
+                <button class="search-btn">
+                    <img src="../storage/img/search-normal.png">
+                </button>
+                <input type="text" class="search-bar"
+                    placeholder="Search clothes. . . "
+                    autocomplete="off">
+            </div>
+            <div class="results"></div>
         </div>
-        <div class="results"></div>
+        <button class="filter">
+            <img src="../storage/img/Filter.png">
+        </button>
     </div>
-    
     <script src="../js/Components/search.js"></script>
     <div class="filter-container">
-        <label class="filter-item active">🔲 All Items</label>
-        <label class="filter-item">👗 Dress</label>
-        <label class="filter-item">👕 T-Shirt</label>
-        <label class="filter-item">👖 Pants</label>
-        <label class="filter-item">🧥 Jackets</label>
-        <label class="filter-item">👟 Shoes</label>
-        <label class="filter-item">🎩 Hats</label>
-        <label class="filter-item">👜 Bags</label>
+        <button class="filter-item">🔲 All Items</button>
+        <button class="filter-item">👗 Dress</button>
+        <button class="filter-item">👕 T-Shirt</button>
+        <button class="filter-item">👖 Pants</button>
+        <button class="filter-item">🧥 Jackets</button>
+        <button class="filter-item">👟 Shoes</button>
+        <button class="filter-item">🎩 Hats</button>
+        <button class="filter-item">👜 Bags</button>
     </div>
     <script src="../js/Components/filter-container.js"></script>
     <div class="main">
@@ -66,13 +70,15 @@
                 <img src="../storage/img/Type=default, Category=linear, Library=star.png">
                 <h6>5.0</h6>
             </div>
-            <div class="c3">
+            <div class="c4">
                 <img src="../storage/img/example4.png">
                 <h1>Light Dress Bless</h1>
                 <h5>Dress modern</h5>
-                <h3>$162.99</h3>
-                <img src="../storage/img/Type=default, Category=linear, Library=star.png">
-                <h6>5.0</h6>
+                <div class="precio">
+                    <h3>$162.99</h3>
+                    <img src="../storage/img/Type=default, Category=linear, Library=star.png">
+                    <h6>5.0</h6>
+                </div>
             </div>
         </div>
     </div>

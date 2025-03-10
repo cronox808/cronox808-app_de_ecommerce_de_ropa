@@ -1,134 +1,251 @@
-@import url(variables.css);
-*{
+@import url('variables.css');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Inter_18pt-Regular";
-}
-.welcome{
-    display: flex;
-    margin-top:24px;
-    margin-left: 24px;
-    margin-right: 24px;
-}
-.welcome img{
-    margin-left: auto;
+    font-family: "EncodeSans-Regular";
 }
 
-
-
-@media (max-width: 480px){
-    .welcome{
-        gap: 180px;
-    }
-}
-
-.welcome h5{
-    font-size: 12px;
-}
-
-/* Pantallas medianas */
-@media (min-width: 600px) {
-  .welcome h5{
-    font-size: 14px; /* Ajuste a 14px para pantallas medianas */
-  }
-}
-
-/* Pantallas grandes */
-@media (min-width: 1024px) {
-    .welcome h5{
-        font-size: 16px;
-    }
-}
-
-/* Pantallas extra grandes */
-@media (min-width: 1440px) {
-  .welcome h5 {
-    font-size: 18px; /* Ajuste a 18px para pantallas muy grandes */
-  }
-}
-
-
-.welcome h1{
-    font-size: 16px;
-}
-  /* Pantallas medianas */
-  @media (min-width: 600px) {
-    .welcome h1 {
-      font-size: 18px; /* Ajuste a 18px para pantallas medianas */
-    }
-  }
-  
-  /* Pantallas grandes */
-  @media (min-width: 1024px) {
-    .welcome h1 {
-      font-size: 20px; /* Ajuste a 20px para pantallas grandes */
-    }
-  }
-  
-  /* Pantallas más grandes */
-  @media (min-width: 1440px) {
-    .welcome h1 {
-      font-size: 24px; /* Ajuste a 24px para pantallas más grandes */
-    }
-  }
-
-  .search-box {
-    margin-top: 16px;
-    background: var(--input-bg);
-    border-radius: 8px;
-    padding: 0.75rem;
-    max-width: 327px;
+html, body {
     width: 100%;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #f8f8f8;
+}
+
+.welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.welcome img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.title h5{
+    font-family: "EncodeSans-Regular";
+}
+
+.title h1 {
+    font-family: "EncodeSans-Bold";
+}
+
+.buscar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 650px; /* Ancho fijo */
+    margin: 16px auto;
+    gap: 8px;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    padding: 0 16px;
+    height: 48px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .row {
     display: flex;
     align-items: center;
-}
-
-.search-btn {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-
-.search-bar {
-    flex: 1;
-    max-height: 2.5rem;
-    border: 0;
-    outline: 0;
-    font-size: 14px;
-    color: var(--text);
-    padding: 0.5rem;
+    width: 100%;
 }
 
 .results {
-    max-height: 20rem;
-    overflow-y: auto;
-    margin-top: 1rem;
+    position: absolute;
+    top: 100%; /* Para que aparezca justo debajo del input */
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Para que se superponga sobre otros elementos */
+    max-height: 200px; /* Evita que sea demasiado grande */
+    overflow-y: auto; /* Permite desplazamiento si hay muchos resultados */
+    font-family: "EncodeSans-Regular";
 }
 
-.results ul {
+
+.search-bar {
+    font-family: "EncodeSans-Regular";
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    padding-left: 8px;
+    background: transparent;
+}
+.search-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.search-btn:hover {
+    background-color: var(--color-4);
+}
+
+.search-btn:active {
+    background-color: var(--color-2);
+}
+
+.filter {
     display: flex;
-    flex-direction: column;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    gap: 0.25rem; /* Espacio entre elementos */
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color:var(--color-1);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.filter:hover {
+    background-color: var(--text);
 }
 
-.results ul li {
-    list-style: none;
-    border-radius: 0.75rem;
-    padding: 1rem 0.75rem;
+.filter:active {
+    background-color: var(--color-2);
+}
+
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 650px; /* Mismo ancho que la barra de búsqueda */
+    margin: 0 auto;
+    overflow-x: auto;
+    gap: 8px;
+    padding: 10px 0;
+    white-space: nowrap;
+}
+
+.filter-item {
+    font-family: "EncodeSans-Medium";
+}
+
+.filter-container button {
+    flex-grow: 1; /* Para distribuir los botones uniformemente */
+    text-align: center;
+    padding: 10px;
+    min-width: 100px; /* Evita que los botones sean demasiado pequeños */
+    border: none;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 14px;
+    transition: background 0.3s ease;
     cursor: pointer;
 }
 
-.results ul li:hover {
-    background: var(--item-hover);
-    border-radius: 0.25rem;
-    transition: background 0.3s ease;
+.filter-container button:hover {
+    background: var(--color-1);
+    color: #fff;
+}
+
+
+
+.c1, .c2, .c3, .c4 {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: fit-content;
+    width: fit-content;
+    height: auto;
+}
+
+.c1 img, .c2 img, .c3 img, .c4 img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+.main {
+    background-color: green;
+    display: grid;
+    grid-template-areas: "left right";
+    grid-template-columns: 30% 30%; /* Siempre divide el espacio en dos */
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    padding: 16px;
+}
+
+.left, .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    min-width: 150px; /* Evita que se colapsen demasiado */
+}
+.left {
+    grid-area: left;
+    background-color: red;
+}
+
+.right {
+    grid-area: right;
+    background-color: blue;
+}
+
+
+/* 📱 En celulares pequeños, aseguramos que siempre haya dos columnas */
+@media (max-width: 400px) {
+    .main {
+        grid-template-columns: 50% 50%; /* Fuerza que siempre haya dos columnas */
+    }
+}
+.precio{
+    display: flex;
+    align-items: center;
+}
+
+.precio img{
+    width: 18px;
+    height: 18px;
+}
+.precio h3{
+    font-size: clamp(14px, 2vw, 24px);
+}
+
+.precio h6{
+    font-size: clamp(12px, 2vw, 24px);
+}
+.c4 h1{
+    font-size: clamp(14px, 2vw, 24px);
+}
+
+.c4 h5{
+    font-size: clamp(10px, 2vw, 24px);
+}
+
+
+footer.select {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 16px;
+    padding: 16px;
+    background: #000000;
+    border-radius: 8px;
 }
