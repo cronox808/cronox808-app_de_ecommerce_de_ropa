@@ -195,25 +195,29 @@
 .filter-container button:hover {
     background: var(--color-1);
     color: #fff;
+
+}
+.filter-container button:hover img{
+    filter: invert(1);
 }
 
 
-
-/* 📌 Ajuste del tamaño de las tarjetas */
+/*  Ajuste del tamaño de las tarjetas */
 .c1, .c2, .c3, .c4 {
     text-align: left;
     width: 100%; /* Ocupará el ancho completo disponible */
     height: auto;
 }
 
-/* 📌 Las imágenes dentro de las tarjetas */
+/*  Las imágenes dentro de las tarjetas */
 .c1 img, .c2 img, .c3 img, .c4 img {
     width: 100%;
     border-radius: 8px;
 }
 
-/* 📌 Ajuste de la cuadrícula principal */
+/* Ajuste de la cuadrícula principal */
 .main {
+    text-decoration: none;
     margin: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Se adapta mejor */
@@ -221,9 +225,14 @@
     gap: 16px;
     width: 100%;
 }
-
-/* 📌 Asegurar que las columnas sean flexibles */
+a{
+    text-decoration: none;
+    color: var(--color-5);
+}
+/* Asegurar que las columnas sean flexibles */
 .left, .right {
+    place-items: center;
+    justify-items: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -232,29 +241,32 @@
     width: 100%;
 }
 
-/* 📌 Estilos para imágenes */
+/*  Estilos para imágenes */
 .left img, .right img {
     width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-/* 📌 Tipografía adaptable */
+/* Tipografía adaptable */
 .c1 h1, .c2 h1, .c3 h1, .c4 h1 { 
     font-family: "EncodeSans-SemiBold";
     margin-top: 8px;
     font-size: clamp(14px, 2vw, 24px);
+    text-decoration: none;
 }
 
 .c1 h5, .c2 h5, .c3 h5, .c4 h5 {
+    text-decoration: none;
     font-family: "EncodeSans-Regular";
     color: var(--color-2);
     margin-top: 4px;
     font-size: clamp(10px, 1.8vw, 22px);
 }
 
-/* 📌 Precio y calificación */
+/*  Precio y calificación */
 .precio {
+    text-decoration: none;
     margin-top: 12px;
     display: flex;
     align-items: center;
@@ -282,7 +294,7 @@
     align-items: center;
 }
 
-/* 📌 Ajustes para móviles pequeños */
+/* Ajustes para móviles pequeños */
 @media (max-width: 600px) {
     .main {
         grid-template-columns: 1fr 1fr; /* Siempre dos columnas */
@@ -292,7 +304,7 @@
     }
 }
 
-/* 📌 Tamaño para tablets */
+/* Tamaño para tablets */
 @media (max-width: 1024px) {
     .main {
         grid-template-columns: 1fr 1fr;
@@ -302,7 +314,7 @@
     }
 }
 
-/* 📌 Tamaño para PC */
+/*  Tamaño para PC */
 @media (min-width: 1025px) {
     .main {
         grid-template-columns: repeat(2, 1fr);
