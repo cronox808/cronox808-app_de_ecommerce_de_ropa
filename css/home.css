@@ -171,6 +171,7 @@ html, body {
     width: fit-content;
     width: fit-content;
     height: auto;
+    text-align: left;
 }
 
 .c1 img, .c2 img, .c3 img, .c4 img {
@@ -180,7 +181,6 @@ html, body {
 
 
 .main {
-    background-color: green;
     display: grid;
     grid-template-areas: "left right";
     grid-template-columns: 30% 30%; /* Siempre divide el espacio en dos */
@@ -199,12 +199,10 @@ html, body {
 }
 .left {
     grid-area: left;
-    background-color: red;
 }
 
 .right {
     grid-area: right;
-    background-color: blue;
 }
 
 
@@ -214,7 +212,50 @@ html, body {
         grid-template-columns: 50% 50%; /* Fuerza que siempre haya dos columnas */
     }
 }
+
+.c1 h1{ 
+    font-family: "EncodeSans-SemiBold";
+    margin-top: 8px;
+    font-size: clamp(14px, 2vw, 24px);
+}
+
+.c2 h5{
+    font-family: "EncodeSans-Regular";
+    color: var(--color-2);
+    margin-top: 4px;
+    font-size: clamp(10px, 2vw, 24px);
+}
+
+
+.c2 h1{ 
+    font-family: "EncodeSans-SemiBold";
+    margin-top: 8px;
+    font-size: clamp(14px, 2vw, 24px);
+}
+
+.c2 h5{
+    font-family: "EncodeSans-Regular";
+    color: var(--color-2);
+    margin-top: 4px;
+    font-size: clamp(10px, 2vw, 24px);
+}
+
+
+.c3 h1{ 
+    font-family: "EncodeSans-SemiBold";
+    margin-top: 8px;
+    font-size: clamp(14px, 2vw, 24px);
+}
+
+.c3 h5{
+    font-family: "EncodeSans-Regular";
+    color: var(--color-2);
+    margin-top: 4px;
+    font-size: clamp(10px, 2vw, 24px);
+}
+
 .precio{
+    margin-top: 12px;
     display: flex;
     align-items: center;
 }
@@ -224,20 +265,32 @@ html, body {
     height: 18px;
 }
 .precio h3{
+    font-family: "EncodeSans-SemiBold";
     font-size: clamp(14px, 2vw, 24px);
 }
 
 .precio h6{
+    font-family: "EncodeSans-Regular";
+    color: var(--color-2);
     font-size: clamp(12px, 2vw, 24px);
 }
-.c4 h1{
+.c4 h1{ 
+    font-family: "EncodeSans-SemiBold";
+    margin-top: 8px;
     font-size: clamp(14px, 2vw, 24px);
 }
 
 .c4 h5{
+    font-family: "EncodeSans-Regular";
+    color: var(--color-2);
+    margin-top: 4px;
     font-size: clamp(10px, 2vw, 24px);
 }
-
+.calificacion{
+    display: flex;
+    margin-left: 24px;
+    align-items: center;
+}
 
 footer.select {
     display: flex;
