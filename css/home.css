@@ -7,11 +7,11 @@
     font-family: "EncodeSans-Regular";
 }
 
-html, body {
+ body {
     width: 100%;
     height: 100%;
     margin: 0;
-    padding: 0;
+    padding: 24px 24px 19px 24px;
     overflow-x: hidden;
     background-color: #f8f8f8;
 }
@@ -163,9 +163,6 @@ html, body {
 
 
 .c1, .c2, .c3, .c4 {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: fit-content;
     width: fit-content;
@@ -311,7 +308,7 @@ html, body {
     font-size: clamp(14px, 2vw, 24px);
 }
 
-.c2 h5{
+.c1 h5{
     font-family: "EncodeSans-Regular";
     color: var(--color-2);
     margin-top: 4px;
