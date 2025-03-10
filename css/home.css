@@ -1,128 +1,64 @@
-@import url(variables.css);
+@import url('variables.css');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Inter_18pt-Regular";
+    font-family: "EncodeSans-Regular";
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    min-height: 100vh;
-    padding: 130px 24px 0 24px;
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
-    overflow: auto;
+    background-color: #f8f8f8;
 }
 
 .welcome {
-    margin: 0;
-    padding: 0;
-    background-color: bisque;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    width: 100%;
-    padding: 12px;
+    align-items: center;
+    padding: 16px;
     border-radius: 8px;
 }
 
 .welcome img {
-    margin-left: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
-.welcome h5 {
-    font-size: 12px;
+.title h5{
+    font-family: "EncodeSans-Regular";
 }
 
-@media (min-width: 600px) {
-    .welcome h5 {
-        font-size: 14px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .welcome h5 {
-        font-size: 16px;
-    }
-}
-
-@media (min-width: 1440px) {
-    .welcome h5 {
-        font-size: 18px;
-    }
-}
-
-.welcome h1 {
-    font-size: 16px;
-}
-
-@media (min-width: 600px) {
-    .welcome h1 {
-        font-size: 18px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .welcome h1 {
-        font-size: 20px;
-    }
-}
-
-@media (min-width: 1440px) {
-    .welcome h1 {
-        font-size: 24px;
-    }
+.title h1 {
+    font-family: "EncodeSans-Bold";
 }
 
 .buscar {
-    margin: 0;
-    padding: 0;
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 16px;
     width: 100%;
-    max-width: 800px;
-    margin-top: 16px;
-    background-color: brown;
-    padding: 8px;
-    border-radius: 8px;
-    justify-content: center;
-}
-
-.filter {
-    border: none;
-    border-radius: 8px;
-    display: flex;
-    background-color: var(--color-1);
-    width: 48px;
-    height: 48px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.filter img {
-    width: 24px;
-    height: 24px;
+    max-width: 650px; /* Ancho fijo */
+    margin: 16px auto;
+    gap: 8px;
 }
 
 .search-box {
     position: relative;
-    background: var(--input-bg);
+    display: flex;
+    align-items: center;
+    background: #fff;
     border-radius: 8px;
     padding: 0 16px;
     height: 48px;
     width: 100%;
     max-width: 600px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .row {
@@ -131,110 +67,98 @@ body {
     width: 100%;
 }
 
+.results {
+    position: absolute;
+    top: 100%; /* Para que aparezca justo debajo del input */
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Para que se superponga sobre otros elementos */
+    max-height: 200px; /* Evita que sea demasiado grande */
+    overflow-y: auto; /* Permite desplazamiento si hay muchos resultados */
+    font-family: "EncodeSans-Regular";
+}
+
+
+.search-bar {
+    font-family: "EncodeSans-Regular";
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    padding-left: 8px;
+    background: transparent;
+}
 .search-btn {
     background: transparent;
     border: none;
-    outline: none;
     cursor: pointer;
+    border-radius: 8px;
+}
+
+.search-btn:hover {
+    background-color: var(--color-4);
+}
+
+.search-btn:active {
+    background-color: var(--color-2);
+}
+
+.filter {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 24px;
-    height: 24px;
-}
-
-.search-btn img {
-    width: 20px;
-    height: 20px;
-}
-
-.search-bar {
-    flex: 1;
-    border: 0;
-    outline: 0;
-    font-size: 14px;
-    color: var(--text);
-    background: transparent;
-    padding: 0;
-}
-
-.results {
-    max-height: 200px;
-    overflow-y: auto;
-    position: absolute;
-    top: calc(100% + 4px);
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    background: var(--input-bg);
+    width: 48px;
+    height: 48px;
+    background-color:var(--color-1);
+    border: none;
     border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    z-index: 1000;
-}
-
-.results ul {
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.results ul li {
-    list-style: none;
-    padding: 12px;
     cursor: pointer;
-    background: white;
+}
+.filter:hover {
+    background-color: var(--text);
 }
 
-.results ul li:hover {
-    background: var(--item-hover);
-    transition: background 0.3s ease;
+.filter:active {
+    background-color: var(--color-2);
 }
+
 
 .filter-container {
     display: flex;
-    flex-wrap: nowrap; /* Mantiene los elementos en una sola línea */
-    justify-content: flex-start; /* Alinea a la izquierda para que el scroll funcione bien */
-    background-color: #333;
-    gap: 16px;
-    padding: 8px;
-    width: 100%;
-    overflow-x: auto; /* Permite el scroll horizontal */
-    white-space: nowrap; /* Evita que los elementos se rompan en varias líneas */
-}
-
-.filter-container a {
-    display: flex;
     justify-content: center;
     align-items: center;
-    height: 34px;
-    padding: 8px 16px;
-    color: white;
+    width: 100%;
+    max-width: 650px; /* Mismo ancho que la barra de búsqueda */
+    margin: 0 auto;
+    overflow-x: auto;
+    gap: 8px;
+    padding: 10px 0;
+    white-space: nowrap;
+}
+
+.filter-item {
+    font-family: "EncodeSans-Medium";
+}
+
+.filter-container button {
+    flex-grow: 1; /* Para distribuir los botones uniformemente */
     text-align: center;
-    text-decoration: none;
+    padding: 10px;
+    min-width: 100px; /* Evita que los botones sean demasiado pequeños */
+    border: none;
     border-radius: 8px;
-    background-color: #444;
+    background: #fff;
+    font-size: 14px;
     transition: background 0.3s ease;
-    font-size: 12px;
-    flex-shrink: 0; /* Evita que los elementos se reduzcan demasiado */
+    cursor: pointer;
 }
 
-.filter-container a:hover {
-    background-color: #555;
-}
-
-/* Media Query para dispositivos pequeños */
-@media (max-width: 768px) {
-    .filter-container {
-        justify-content: flex-start; /* Mantiene el scroll en móviles */
-        padding: 8px 16px;
-    }
-
-    .filter-container a {
-        font-size: 10px;
-        padding: 6px 12px;
-    }
+.filter-container button:hover {
+    background: var(--color-1);
+    color: #fff;
 }
 
 .main {
@@ -242,7 +166,6 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 100%;
 }
 
 .left, .right {
@@ -251,6 +174,22 @@ body {
     flex-wrap: wrap;
     gap: 16px;
     width: 100%;
+    max-width: 900px;
+}
+
+.c1, .c2, .c3 {
+    background: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 280px;
+}
+
+.c1 img, .c2 img, .c3 img {
+    width: 100%;
+    border-radius: 8px;
 }
 
 footer.select {
@@ -258,5 +197,8 @@ footer.select {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    margin: 16px auto;
+    margin-top: 16px;
+    padding: 16px;
+    background: #fff;
+    border-radius: 8px;
 }
