@@ -7,55 +7,72 @@
     <link rel="stylesheet" href="../css/detail.css">
 </head>
 <body>
+    <div class="container">
         <div class="image-container">
             <img src="../storage/img/example2.png" alt="Producto" class="product-image">
-            <img src="../storage/img/Type=outline, Library=arrow-left.png" alt="Volver" class="back-icon">
-            <img src="../storage/img/favorite-icon.png" alt="Favorito" class="favorite-icon">
+    
+            <div class="icon-wrapper back-icon">
+                <img src="../storage/img/Type=outline, Library=arrow-left.png" alt="Volver">
+            </div>
+    
+            <div class="icon-wrapper favorite-icon">
+                <img src="../storage/img/favorite-icon.png" alt="Favorito">
+            </div>
         </div>
+
+        <!-- Contenedor de los detalles -->
         <div class="details-container">
             <div class="product-details">
-                <div class="title">
-                    <h1 class="product-title">Light Dress Bless</h1>
-                    <div class="rating">
-                        <img src="../storage/img/Type=default, Category=linear, Library=star.png" alt="Estrella" class="star-icon">
-                        <span>5.0</span>
-                        <a href="#" class="reviews">(7,932 reviews)</a>
-                    </div>                    
-                </div>
+                <h1 class="product-title">Light Dress Bless</h1>
                 <div class="number">
                     <button class="quantity-btn">-</button>
                     <span class="quantity">1</span>
                     <button class="quantity-btn">+</button>
                 </div>
             </div>
-            <p class="description">Its simple and elegant shape makes it perfect for <br>
+
+            <div class="rating">
+                <img src="../storage/img/Type=default, Category=linear, Library=star.png" alt="Estrella" class="star-icon">
+                <span>5.0</span>
+                <a href="#" class="reviews">(7,932 reviews)</a>
+            </div> 
+
+            <p class="description">
+                Its simple and elegant shape makes it perfect for <br>
                 those of you who like you who want minimalist <br>
-                clothes <a href="#">Read More...</a></p>
-                <div style="width: calc(100% - 50px); height: 1px; background-color: var(--color-7); margin: 16px 24px auto;"></div>
+                clothes <a href="#">Read More...</a>
+            </p>
+
+            <div class="divider"></div>
+
             <div class="options">
                 <div class="sizes">
                     <label>Choose Size</label>
                     <div class="size-options">
                         <button>S</button>
                         <button>M</button>
-                        <button>L</button>
+                        <button class="active">L</button>
                         <button>XL</button>
                     </div>
                 </div>
                 <div class="colors">
                     <label>Color</label>
                     <div class="color-options">
-                        <span class="color black"></span>
-                        <span class="color gray"></span>
                         <span class="color dark-gray"></span>
+                        <span class="color gray"></span>
+                        <span class="color black active"></span>
                     </div>
                 </div>
             </div>
-            <div class="cart-container">
 
-                <button class="add-to-cart">Add to Cart | <span class="price">$162.99</span> <span class="old-price">$199.99</span></button>
+            <div class="cart-container">
+                <button class="add-to-cart">
+                    <img src="../storage/img/shopping-cart.png" alt="Carrito" class="cart-icon">
+                    Add to Cart | <span class="price">$162.99</span> <span class="old-price">$199.99</span>
+                </button>
             </div>
         </div>
-
+    </div>
 </body>
 </html>
+
