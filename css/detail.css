@@ -5,3 +5,138 @@
     box-sizing: border-box;
     font-family: "Inter_18pt-Regular";
 }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.product-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-details{
+    display: flex;
+}
+ .number{
+    margin-left: 37px;
+     display: flex;
+     align-items: center;
+     gap: 10px;
+ }
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.product-image {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.back-icon, .favorite-icon {
+    position: absolute;
+    top: 15px;
+    width: 24px;
+    cursor: pointer;
+}
+
+.back-icon {
+    left: 15px;
+}
+
+.favorite-icon {
+    right: 15px;
+}
+
+.product-title {
+    font-size: 22px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.star-icon {
+    width: 18px;
+}
+
+.reviews {
+    color: blue;
+    text-decoration: none;
+}
+
+.description {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.description a{
+    text-decoration: none;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    align-items: center;
+}
+
+.sizes, .colors {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.size-options {
+    display: flex;
+    gap: 8px;
+}
+
+.size-options button {
+    margin: 0;
+    padding: 5px 12px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    border-radius: 5px;
+    background: white;
+    font-weight: bold;
+}
+
+.size-options button.active {
+    background: black;
+    color: white;
+}
+
+.color-options {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.color-options .color {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
