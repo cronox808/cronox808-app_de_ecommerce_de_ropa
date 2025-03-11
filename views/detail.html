@@ -1,11 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Producto</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div class="product-container">
+        <div class="image-container">
+            <img src="../storage/img/example2.png" alt="Producto">
+            <img src="../storage/img/favorite-icon.png" alt="Favorito" class="favorite-icon">
+        </div>
+        <div class="details-container">
+            <h1>Light Dress Bless</h1>
+            <p class="rating"><img src="../storage/img/Type=default, Category=linear, Library=star.png"> 5.0 <span class="reviews">(7,932 reviews)</span></p>
+            <p class="description">Su forma simple y elegante lo hace perfecto para quienes prefieren ropa minimalista <a href="#">Leer más...</a></p>
+            <div class="options">
+                <div class="size-selector">
+                    <label>Elige tu talla:</label>
+                    <button>S</button>
+                    <button>M</button>
+                    <button class="selected">L</button>
+                    <button>XL</button>
+                </div>
+                <div class="color-selector">
+                    <label>Color:</label>
+                    <button class="color color1"></button>
+                    <button class="color color2"></button>
+                    <button class="color color3"></button>
+                </div>
+            </div>
+            <div class="purchase">
+                <p class="price">$162.99 <span class="old-price">$190.99</span></p>
+                <button class="cart-button">🛒 Agregar al carrito</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
