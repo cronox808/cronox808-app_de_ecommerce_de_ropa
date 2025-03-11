@@ -4,21 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Producto</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/detail.css">
 </head>
 <body>
     <div class="product-container">
         <div class="image-container">
-            <img src="image.png" alt="Producto" class="product-image">
-            <img src="back-icon.png" alt="Volver" class="back-icon">
-            <img src="favorite-icon.png" alt="Favorito" class="favorite-icon">
+            <img src="../storage/img/example2.png" alt="Producto" class="product-image">
+            <img src="../storage/img/Type=outline, Library=arrow-left.png" alt="Volver" class="back-icon">
+            <img src="../storage/img/favorite-icon.png" alt="Favorito" class="favorite-icon">
         </div>
         <div class="details-container">
-            <h1 class="product-title">Light Dress Bless</h1>
-            <div class="rating">
-                <img src="star-icon.png" alt="Estrella" class="star-icon">
-                <span>5.0</span>
-                <a href="#" class="reviews">(7,932 reviews)</a>
+            <div class="product-details">
+                <div class="title">
+                    <h1 class="product-title">Light Dress Bless</h1>
+                    <div class="rating">
+                        <img src="../storage/img/Type=default, Category=linear, Library=star.png" alt="Estrella" class="star-icon">
+                        <span>5.0</span>
+                        <a href="#" class="reviews">(7,932 reviews)</a>
+                    </div>                    
+                </div>
+                <div class="number">
+                    <button class="quantity-btn">-</button>
+                    <span class="quantity">1</span>
+                    <button class="quantity-btn">+</button>
+                </div>
             </div>
             <p class="description">Es simple y elegante, perfecto para quienes prefieren ropa minimalista <a href="#">Read More...</a></p>
             <div class="options">
@@ -41,9 +50,7 @@
                 </div>
             </div>
             <div class="cart-container">
-                <button class="quantity-btn">-</button>
-                <span class="quantity">1</span>
-                <button class="quantity-btn">+</button>
+
                 <button class="add-to-cart">Add to Cart | <span class="price">$162.99</span> <span class="old-price">$199.99</span></button>
             </div>
         </div>
