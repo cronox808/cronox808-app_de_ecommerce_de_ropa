@@ -29,15 +29,20 @@ body {
 }
 
 .cart-item {
-    margin-top: 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 0;
-    border-bottom: 1px solid #ddd;
+}
+
+.separator {
+    margin-top: 24px;
+    border: none;
+    border-top: 1px solid #ddd;
 }
 
 .cart-item img {
+    margin-top: 24px;
     width: 70px;
     height: 70px;
     border-radius: 14px;
@@ -61,13 +66,14 @@ body {
 }
 
 .parrafo2 {
-    font-family: 16px;
+    margin-top: 16px;
     font-size: 14px;
 }
 
 .quantity-controls {
     display: flex;
     align-items: center;
+    gap: 12px;
 }
 
 .quantity-controls button {
@@ -78,6 +84,13 @@ body {
     background: white;
     cursor: pointer;
     font-size: 18px;
+}
+
+.payment-title {
+    margin-top: 44px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .payment-info {
