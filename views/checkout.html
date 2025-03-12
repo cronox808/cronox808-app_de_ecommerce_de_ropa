@@ -3,9 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Checkout</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div class="checkout-container">
+        <div class="header">
+            <img src="../storage/img/Type=outline, Library=arrow-left.png" alt="Back" class="back-icon">
+            <span>Checkout</span>
+            <img src="../storage/img/Type=outline, Library=menu.png" alt="Menu" class="menu-icon">
+        </div>
+
+        <div class="cart-item">
+            <img src="../storage/img/example1.png" alt="Product">
+            <div class="item-info">
+                <strong>Modern light clothes</strong>
+                <p>Dress modern</p>
+                <p>$212.99</p>
+            </div>
+            <div class="quantity-controls">
+                <button>-</button>
+                <span>4</span>
+                <button>+</button>
+            </div>
+        </div>
+
+        <div class="cart-item">
+            <img src="../storage/img/example2.png" alt="Product">
+            <div class="item-info">
+                <strong>Modern light clothes</strong>
+                <p>Dress modern</p>
+                <p>$162.99</p>
+            </div>
+            <div class="quantity-controls">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+            </div>
+        </div>
+
+        <div class="payment-info">
+            <strong>Shipping Information</strong>
+            <div class="payment-card">
+                <img src="../storage/img/Type=default, Category=linear, Library=card.png" alt="Visa Logo" class="visa-logo">
+                <p>**** **** **** 2143</p>
+            </div>
+        </div>
+
+        <div class="total">Total (9 items) <strong>$1,014.95</strong></div>
+        <div class="total">Shipping Fee <strong>$0.00</strong></div>
+        <div class="total">Discount <strong>$0.00</strong></div>
+        <div class="total">Sub Total <strong>$1,014.95</strong></div>
+
+        <div class="pay-button">Pay</div>
+    </div>
 </body>
 </html>
