@@ -1,12 +1,16 @@
 // Definir la lista de países (puedes agregar más países aquí)
 const countryList = [
-    "Afganistán",
-    "Albania",
-    "Alemania",
-    "Andorra",
-    "Angola",
-    "Antigua y Barbuda",
-    "Arabia Saudita",
+    "camisas",
+    "jeans",
+    "busos",
+    "faldas",
+    "pantalones",
+    "camisetas",
+    "zapatos",
+    "ropa",
+    "vestidos",
+    "calzado",
+    "ropa de cama",
     // Agrega más países si es necesario
 ];
 
