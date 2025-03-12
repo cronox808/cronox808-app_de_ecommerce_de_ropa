@@ -1,0 +1,447 @@
+@import url('variables.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "EncodeSans-Regular";
+}
+
+ body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 24px 24px 19px 24px;
+    overflow-x: hidden;
+}
+
+.welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.welcome img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.title h5{
+    font-family: "EncodeSans-Regular";
+    color: var(--color-2);
+}
+
+.title h1 {
+    font-family: "EncodeSans-Bold";
+}
+
+.buscar {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 650px; /* Ancho fijo */
+    margin: 16px auto;
+    gap: 8px;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    padding: 0 16px;
+    height: 48px;
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid var(--color-6);
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.results {
+    position: absolute;
+    top: 100%; /* Para que aparezca justo debajo del input */
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Para que se superponga sobre otros elementos */
+    max-height: 200px; /* Evita que sea demasiado grande */
+    overflow-y: auto; /* Permite desplazamiento si hay muchos resultados */
+    font-family: "EncodeSans-Regular";
+}
+
+
+.search-bar {
+    font-family: "EncodeSans-Regular";
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    padding-left: 8px;
+    background: transparent;
+}
+.search-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.search-btn:hover {
+    background-color: var(--color-4);
+}
+
+.search-btn:active {
+    background-color: var(--color-2);
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color:var(--color-1);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.filter:hover {
+    background-color: var(--text);
+}
+
+.filter:active {
+    background-color: var(--color-2);
+}
+
+
+.filter-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    overflow-x: auto; /* Permite el scroll horizontal */
+    gap: 8px;
+    margin-bottom: 24px;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    scrollbar-color: black transparent;
+    
+}
+
+
+/* Personalización del scroll en PC */
+.filter-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.filter-container::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
+
+.filter-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Ocultar scrollbar en móviles y tablets */
+@media (max-width: 1024px) {
+    .filter-container {
+        scrollbar-width: none; /* Oculta el scrollbar en Firefox */
+    }
+
+    .filter-container::-webkit-scrollbar {
+        display: none; /* Oculta el scrollbar en Chrome, Safari, Edge */
+    }
+}
+
+.filter-item {
+    font-family: "EncodeSans-Medium";
+    
+}
+
+.filter-container button {
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; /* Para distribuir los botones uniformemente */
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    min-width: 100px; /* Evita que los botones sean demasiado pequeños */
+    border-radius: 8px;
+    background: #fff;
+    font-size: 14px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    border: 1px solid var(--color-6);
+    min-width: auto; /* Permite que el ancho se ajuste al contenido */
+    max-width: 100%;
+    color: var(--color-1);
+}
+
+.filter-container button:hover {
+    background: var(--color-1);
+    color: #fff;
+
+}
+.filter-container button:hover img{
+    filter: invert(1);
+}
+
+
+/*  Ajuste del tamaño de las tarjetas */
+.c1, .c2, .c3, .c4 {
+    text-align: left;
+    width: 100%; /* Ocupará el ancho completo disponible */
+    height: auto;
+}
+
+/*  Las imágenes dentro de las tarjetas */
+.c1 img, .c2 img, .c3 img, .c4 img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Ajuste de la cuadrícula principal */
+.main {
+    text-decoration: none;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Se adapta mejor */
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: var(--color-5);
+}
+.img1{
+    object-fit: cover !important;
+    position: relative;
+}
+.img2{
+    object-fit: cover !important;
+    position: relative;
+}
+.imagen-superpuesta {
+    background-color: red;
+    position: absolute;
+    top: 14px;  /* Ajusta la posición */
+    right: 14px;
+    width: 24px !important;
+    height: 24px !important;/* Transparencia opcional */
+  }
+
+/* Asegurar que las columnas sean flexibles */
+.left, .right {
+    position: relative;
+    place-items: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    min-width: 150px; /* Evita que se colapsen demasiado */
+    width: 100%;
+}
+
+/*  Estilos para imágenes */
+.left img, .right img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Tipografía adaptable */
+.c1 h1, .c2 h1, .c3 h1, .c4 h1 { 
+    font-family: "EncodeSans-SemiBold";
+    margin-top: 8px;
+    font-size: clamp(14px, 2vw, 24px);
+    text-decoration: none;
+}
+
+.c1 h5, .c2 h5, .c3 h5, .c4 h5 {
+    text-decoration: none;
+    font-family: "EncodeSans-Regular";
+    color: var(--color-2);
+    margin-top: 4px;
+    font-size: clamp(10px, 1.8vw, 22px);
+}
+
+/*  Precio y calificación */
+.precio {
+    text-decoration: none;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.precio img {
+    width: 18px;
+    height: 18px;
+}
+
+.precio h3 {
+    font-family: "EncodeSans-SemiBold";
+    font-size: clamp(14px, 2vw, 24px);
+}
+
+.precio h6 {
+    font-family: "EncodeSans-Regular";
+    color: var(--color-2);
+    font-size: clamp(12px, 2vw, 22px);
+}
+
+.calificacion {
+    display: flex;
+    margin-left: 24px;
+    align-items: center;
+}
+
+/* Ajustes para móviles pequeños */
+@media (max-width: 600px) {
+    .main {
+        grid-template-columns: 1fr 1fr; /* Siempre dos columnas */
+    }
+    .left img, .right img {
+        max-width: 140px; /* Ajuste automático */
+    }
+}
+
+/* Tamaño para tablets */
+@media (max-width: 1024px) {
+    .main {
+        grid-template-columns: 1fr 1fr;
+    }
+    .left img, .right img {
+        max-width: 300px;
+    }
+}
+
+/*  Tamaño para PC */
+@media (min-width: 1025px) {
+    .main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .left img, .right img {
+        max-width: 600px;
+    }
+}
+
+
+.precio{
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.precio img{
+    width: 18px;
+    height: 18px;
+}
+.precio h3{
+    font-family: "EncodeSans-SemiBold";
+    font-size: clamp(14px, 2vw, 24px);
+}
+
+.precio h6{
+    font-family: "EncodeSans-Regular";
+    color: var(--color-2);
+    font-size: clamp(12px, 2vw, 24px);
+}
+.c4 h1{ 
+    font-family: "EncodeSans-SemiBold";
+    margin-top: 8px;
+    font-size: clamp(14px, 2vw, 24px);
+}
+
+.c4 h5{
+    font-family: "EncodeSans-Regular";
+    color: var(--color-2);
+    margin-top: 4px;
+    font-size: clamp(10px, 2vw, 24px);
+}
+.calificacion{
+    display: flex;
+    margin-left: 24px;
+    align-items: center;
+}
+
+/* 🔹 Contenedor padre con el difuminado */
+.footer-wrapper {
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 66px; /* Ajusta la altura total */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 999;
+    pointer-events: none; /* No bloquea clics */
+}
+
+/* 🔹 Efecto de difuminado */
+.footer-wrapper::before {
+    content: "";
+    position: absolute;
+    top: -49px; 
+    left: 0;
+    width: 100%;
+    height: 50px; /* Altura del difuminado */
+    background: linear-gradient(to top, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+    z-index: -1;
+}
+
+/* 🔹 Contenedor interno del footer */
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: all;
+    width: 100%;
+}
+
+/* 🔹 Footer negro con iconos */
+footer.select {
+    position: absolute;
+    bottom: 19px;
+    left: 24px;
+    right: 24px;
+    background: var(--color-1);
+    padding: 18px 0; /* Aumenta el espacio interno */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 44px;
+    z-index: 10;
+    width: calc(100% - 48px);
+    min-height: 66px; /* Asegura que tenga suficiente altura */
+}
+
+/* 🔹 Iconos dentro del footer */
+footer.select img {
+    width: 35px; /* Aumenta el tamaño */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+footer.select img:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
