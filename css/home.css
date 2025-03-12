@@ -239,7 +239,6 @@ a{
     position: relative;
 }
 .imagen-superpuesta {
-    background-color: red;
     position: absolute;
     top: 14px;  /* Ajusta la posición */
     right: 14px;
